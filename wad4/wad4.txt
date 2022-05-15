@@ -1,0 +1,35 @@
+##App module.ts
+
+import {FormsModule } from '@angular/forms ';
+
+
+imports: [
+
+FormsModule,
+]
+
+
+##App component.html
+
+<h1>simple form</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+  <input type="text" ngModel name="user" placeholder="enter your name">
+  <br><br>
+  <input type="text" ngModel name="age" placeholder="enter your age">
+  <br><br>
+  <button>submit</button>
+
+</form>
+
+
+##App component.ts
+
+export class AppComponent {
+  title = 'user-registration';
+  getValues(val: any){
+    console.warn(val)
+  }
+}
+
+
+Step1 :  folder > cmd > code . > ng serve >......
