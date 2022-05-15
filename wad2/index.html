@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ajax Registration Form</title>
+		<meta charset="UTF-8">
+		<meta name="descrition" content="Free web tutorials">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	</head>
+	<body>
+		<form>
+			Username: <input type="text" name="user" id="user" placeholder="Username"/>
+			<br> Phone: <input type="text" name="mobile" id="contact" placeholder="mobileno"/>
+			<br> Email: <input type="text" name="email" id="email" placeholder="email"/>
+			<br> Password: <input type="password" name="pass" id="pass" placeholder="password"/>
+			<br> Confirm Password: <input type="text" name="compass" id="conpass" placeholder="Confirm pass"/>
+			<br>
+			<button type="submit" onclick="saveData()">Submit</button>
+		</form>
+		<script>
+			function saveData() {
+				let user,mobile,email,psw,cpsw;
+				user=document.getElementById('user').value;
+				mobile=document.getElementById('contact').value;
+				email=document.getElementById('email').value;
+				psw=document.getElementById('pass').value;
+				cpsw=document.getElementById('conpass').value;
+
+				localStorage.setItem("Username",user);
+				localStorage.setItem("Phone",mobile);
+				localStorage.setItem("Email",email);
+				localStorage.setItem("Password",psw);
+
+
+
+
+			}
+		</script>
+	</body>
+</html>
